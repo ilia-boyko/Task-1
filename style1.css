@@ -1,14 +1,26 @@
-#wrapper, div.main{
-	display:flex;
-	flex-direction:column;
+@media screen and (orientation: portrait) and (min-width: 720px) {
+  div.main{
+	  display:flex;
+	  flex-direction:column;
+  }
+  nav{
+	  order:1;
+  }
+  ol{
+	  order:2;
+  }
+  div.form{
+	  order:3;
+  }
+  div.table{
+	  order:4;
+  }
 }
 header{
-	width:99%;
+	width:100%;
 	margin: 0 auto;
 	height:120px;
 	background-color:#ccc;
-	flex:1;
-	order:1;
 }
 img.logo{
 	float:left;
@@ -20,32 +32,25 @@ div.title{
 	padding:40px;
 }
 div.main {
-	width:99%;
+	width:100%;
+	max-width:960px;
 	margin: 0 auto;
 	margin-top:20px;
-	flex:2;
-	order:2;
 }
 nav{
 	padding:10px;
 	background-color:#ccc;
 	text-align:center;
 	height:20px;
-	flex:1;
-	order:1;
 }
 ol{
 	padding:40px;
 	background-color:#ddd;
 	margin-bottom:0px;
-	flex:2;
-	order:2;
 }
 div.table{
 	background-color:#ddd;
 	margin-top:20px;
-	flex:4;
-	order:4;
 }
 table th{
 	font-size:large;
@@ -68,26 +73,11 @@ div.form{
 	padding:40px;
 	background-color:#ddd;
 	margin-top:20px;
-	flex:3;
-	order:3;
 }
 footer{
-	width:99%;
+	width:100%;
 	margin: 0 auto;
 	height:30px;
 	background-color:#ccc;
 	margin-top:10px;
-	flex:3;
-	order:3;
-}
-@media screen and (min-width: 800px){
-	div.main{
-		max-width:960px;
-	}
-	div.table{
-		order:3;
-	}
-	div.form{
-		order:4;
-	}
 }
